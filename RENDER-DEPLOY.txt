@@ -1,6 +1,7 @@
 COMO PONER EL BOT DE KEYS EN RENDER
 
-Este bot debe crearse en Render como Background Worker, no como Web Service.
+Este bot se crea en Render como Web Service para poder usar el plan Free.
+El bot tambien abre una pagina simple de estado para que Render lo pueda mantener corriendo.
 
 REPO
 
@@ -8,15 +9,16 @@ https://github.com/ysiemmanuel9-source/bot-keys
 
 CONFIGURACION EN RENDER
 
-Tipo: Background Worker
+Tipo: Web Service
 Build Command: npm install
 Start Command: npm start
 Plan: Free
 
 IMPORTANTE
 
-Render Free puede dormir o apagar servicios gratis segun el uso y las reglas de Render.
-Si el bot se desconecta, revisa Logs y Events.
+Render Free puede dormir si no recibe visitas. Para que este siempre activo de verdad,
+lo mas estable es plan pago. Si quieres usar Free, pon un monitor externo que visite
+la URL del servicio cada pocos minutos.
 
 VARIABLES QUE TIENES QUE PEGAR EN RENDER
 

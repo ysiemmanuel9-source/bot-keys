@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 const fs = require("node:fs");
+const http = require("node:http");
 const path = require("node:path");
 const {
   ActionRowBuilder,
@@ -120,6 +121,7 @@ client.on("interactionCreate", async (interaction) => {
 });
 
 client.login(requiredEnv("DISCORD_TOKEN"));
+startHealthServer();
 
 function loadProjects() {
   const filePath = path.join(__dirname, "..", "projects.json");
@@ -785,4 +787,16 @@ function cleanError(error) {
   if (!error) return "error desconocido";
   if (typeof error === "string") return error;
   return error.message || JSON.stringify(error);
+}
+
+function startHealthServer() {
+  const port = Number(process.env.PORT || 10000);
+  http
+    .createServer((req, res) => {
+      res.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
+      res.end(`CENTRAL KEYS online\nDiscord: ${client.user?.tag || "conectando"}\n`);
+    })
+    .listen(port, () => {
+      console.log(`Health server escuchando en puerto ${port}`);
+    });
 }
