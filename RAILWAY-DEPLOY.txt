@@ -1,0 +1,59 @@
+COMO PONER EL BOT DE KEYS EN RAILWAY
+
+Railway es mejor para este bot que Render gratis porque el bot necesita estar conectado siempre a Discord.
+Ojo: Railway gratis funciona con creditos. Si se acaba el credito, el bot se apaga.
+
+ARCHIVOS IMPORTANTES
+
+- package.json: tiene el comando npm start
+- railway.json: le dice a Railway como iniciar el bot
+- Procfile: respaldo por si Railway lo detecta como worker
+- .env: NO se sube a GitHub. Las variables se pegan en Railway.
+
+PASOS
+
+1. Sube esta carpeta a GitHub.
+2. Entra a https://railway.app
+3. New Project
+4. Deploy from GitHub repo
+5. Elige el repo del bot de keys.
+6. Cuando abra el proyecto, entra a Variables.
+7. Copia todas las variables del archivo .env y pegalas en Railway.
+8. Deploy.
+
+VARIABLES QUE DEBEN ESTAR EN RAILWAY
+
+DISCORD_TOKEN
+GUILD_ID
+KEYS_ADMIN_ROLE
+KEYS_CATEGORY_NAME
+
+GLLYZI_ADMIN_EMAIL
+GLLYZI_ADMIN_PASSWORD
+
+TRYHARD_ADMIN_EMAIL
+TRYHARD_ADMIN_PASSWORD
+
+BLACKOUT_ADMIN_EMAIL
+BLACKOUT_ADMIN_PASSWORD
+
+ZEUS_ADMIN_EMAIL
+ZEUS_ADMIN_PASSWORD
+
+NO SUBAS EL .env A GITHUB
+
+El .env tiene el token del bot y claves. En Railway van en Variables, no como archivo publico.
+
+DESPUES DEL DEPLOY
+
+Cuando Railway diga Deploy Successful, el bot debe salir online en Discord.
+Si no sale online, abre Logs en Railway y revisa el error.
+
+COMANDOS DEL BOT
+
+/preparar-canales
+/crear-key
+/ver-keys
+/bloquear-todas
+/eliminar-bloqueadas
+/eliminar-todas

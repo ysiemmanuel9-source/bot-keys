@@ -1,0 +1,46 @@
+[
+  {
+    "id": "gllyzi",
+    "name": "GLLYZI APP",
+    "keyPrefix": "GLLYZI",
+    "roleName": "KEYS GLLYZI",
+    "channelName": "keys-gllyzi",
+    "supabaseUrl": "https://zffwtixmbuctinffojwe.supabase.co",
+    "supabaseAnonKey": "sb_publishable_6xRmOLD0Cw4Dtwn460l_Zw_Y7khT6wA",
+    "adminEmailEnv": "GLLYZI_ADMIN_EMAIL",
+    "adminPasswordEnv": "GLLYZI_ADMIN_PASSWORD"
+  },
+  {
+    "id": "tryhard",
+    "name": "TRYHARD APP",
+    "keyPrefix": "TRYHARD",
+    "roleName": "KEYS TRYHARD",
+    "channelName": "keys-tryhard",
+    "supabaseUrl": "https://gvnrcivehodixrvvtevl.supabase.co",
+    "supabaseAnonKey": "sb_publishable_cYxYOc__uyN0ft1emUBf9g_8tvCsHku",
+    "adminEmailEnv": "TRYHARD_ADMIN_EMAIL",
+    "adminPasswordEnv": "TRYHARD_ADMIN_PASSWORD"
+  },
+  {
+    "id": "blackout",
+    "name": "BLACKOUT",
+    "keyPrefix": "BLACKOUT",
+    "roleName": "KEYS BLACKOUT",
+    "channelName": "keys-blackout",
+    "supabaseUrl": "https://lquefcunhwqkpsdyckpj.supabase.co",
+    "supabaseAnonKey": "sb_publishable_LU0_mdkNyRtEbv4ACU6oCw_dp-5nN62",
+    "adminEmailEnv": "BLACKOUT_ADMIN_EMAIL",
+    "adminPasswordEnv": "BLACKOUT_ADMIN_PASSWORD"
+  },
+  {
+    "id": "zeus",
+    "name": "ZEUS PRIME",
+    "keyPrefix": "ZEUS",
+    "roleName": "KEYS ZEUS PRIME",
+    "channelName": "keys-zeus-prime",
+    "supabaseUrl": "https://oqpgabogasnxjejgakrt.supabase.co",
+    "supabaseAnonKey": "sb_publishable_yL2R4NnUAO5SBP04edbPrg_zWpPFA31",
+    "adminEmailEnv": "ZEUS_ADMIN_EMAIL",
+    "adminPasswordEnv": "ZEUS_ADMIN_PASSWORD"
+  }
+]

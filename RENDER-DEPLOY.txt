@@ -1,0 +1,57 @@
+COMO PONER EL BOT DE KEYS EN RENDER
+
+Este bot debe crearse en Render como Background Worker, no como Web Service.
+
+REPO
+
+https://github.com/ysiemmanuel9-source/bot-keys
+
+CONFIGURACION EN RENDER
+
+Tipo: Background Worker
+Build Command: npm install
+Start Command: npm start
+Plan: Free
+
+IMPORTANTE
+
+Render Free puede dormir o apagar servicios gratis segun el uso y las reglas de Render.
+Si el bot se desconecta, revisa Logs y Events.
+
+VARIABLES QUE TIENES QUE PEGAR EN RENDER
+
+Copia los valores desde tu archivo .env local y pegalos en Render > Environment.
+No subas el archivo .env a GitHub.
+
+DISCORD_TOKEN
+GUILD_ID
+KEYS_ADMIN_ROLE
+KEYS_CATEGORY_NAME
+
+GLLYZI_ADMIN_EMAIL
+GLLYZI_ADMIN_PASSWORD
+
+TRYHARD_ADMIN_EMAIL
+TRYHARD_ADMIN_PASSWORD
+
+BLACKOUT_ADMIN_EMAIL
+BLACKOUT_ADMIN_PASSWORD
+
+ZEUS_ADMIN_EMAIL
+ZEUS_ADMIN_PASSWORD
+
+DESPUES DE PEGAR VARIABLES
+
+1. Save Changes
+2. Manual Deploy
+3. Clear build cache & deploy, si Render lo permite
+4. Espera que diga Live
+
+SI SALE ERROR
+
+Abre Logs en Render.
+Los errores mas comunes son:
+- Falta DISCORD_TOKEN
+- Falta una clave de Supabase
+- Token del bot incorrecto
+- El bot ya esta corriendo en otra parte con el mismo token

@@ -1,0 +1,48 @@
+BOT DE KEYS PARA DISCORD
+
+Servidor configurado:
+1558917464295997582
+
+QUE NECESITO PRIMERO
+
+1. Crear el bot en Discord Developer Portal.
+2. Copiar el token del bot.
+3. Pegar el token en el archivo .env, donde dice:
+   DISCORD_TOKEN=PEGA_AQUI_EL_TOKEN_DEL_BOT
+4. Invitar el bot al servidor con permisos para:
+   - Administrar roles
+   - Administrar canales
+   - Ver canales
+   - Enviar mensajes
+   - Usar comandos de slash
+   - Leer historial de mensajes
+   No necesitas activar Privileged Gateway Intents para este bot.
+5. Poner en .env los correos y passwords admin de Supabase de cada proyecto.
+6. Abrir INICIAR-BOT-KEYS.cmd.
+7. En Discord usar:
+   /preparar-canales
+8. Darle a cada dueno el rol de su proyecto.
+
+COMANDOS EN ESPANOL
+
+/preparar-canales
+Crea todos los canales privados y roles.
+
+/crear-key
+Crea una key para el proyecto elegido. Pide cliente obligatorio y deja botones.
+
+/ver-keys
+Muestra las keys de un proyecto y deja botones para administrarlas.
+
+/bloquear-todas
+Bloquea todas las keys de un proyecto.
+
+/eliminar-bloqueadas
+Elimina todas las keys bloqueadas o expiradas.
+
+/eliminar-todas
+Bloquea y elimina todas las keys de un proyecto.
+
+IMPORTANTE
+
+El archivo .env no se comparte con nadie. Ahi va el token del bot y los accesos admin.
