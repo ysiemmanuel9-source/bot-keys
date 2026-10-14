@@ -1,0 +1,68 @@
+GUIA PARA HOST PREMIUM DE NODE.JS
+
+Este proyecto esta preparado para un hosting Node.js que mantenga procesos 24/7.
+No necesita Render, GitHub Actions ni entrar a una pagina para mantenerlo activo.
+
+ARCHIVOS QUE SE SUBEN
+
+- src/
+- projects.json
+- package.json
+- package-lock.json
+- Procfile
+- ecosystem.config.cjs (opcional, si el host usa PM2)
+
+NO SUBIR
+
+- .env
+- node_modules/
+- .git/
+
+CONFIGURACION DEL HOST
+
+Runtime: Node.js 20 o superior
+Install/Build command: npm install
+Start command: npm start
+Puerto: usar la variable PORT del host si el panel la solicita
+
+VARIABLES DE ENTORNO
+
+Crear las variables del archivo .env.example en el panel Environment/Variables.
+Tambien se puede subir un archivo .env solamente si el panel es privado y el host
+lo protege. Nunca debe publicarse en GitHub ni compartirse en un chat.
+
+VARIABLES MINIMAS
+
+DISCORD_TOKEN
+GUILD_ID
+KEYS_ADMIN_ROLE
+KEYS_CATEGORY_NAME
+GLLYZI_ADMIN_EMAIL
+GLLYZI_ADMIN_PASSWORD
+TRYHARD_ADMIN_EMAIL
+TRYHARD_ADMIN_PASSWORD
+BLACKOUT_ADMIN_EMAIL
+BLACKOUT_ADMIN_PASSWORD
+ZEUS_ADMIN_EMAIL
+ZEUS_ADMIN_PASSWORD
+
+INSTALACION MANUAL
+
+1. Subir la carpeta del proyecto al host.
+2. Ejecutar: npm install
+3. Agregar las variables de entorno.
+4. Ejecutar: npm start
+5. Activar Auto Restart/Restart on crash si aparece en el panel.
+
+CON PM2
+
+npm install --global pm2
+pm2 start ecosystem.config.cjs
+pm2 save
+
+El bot debe mostrar en los logs:
+Bot conectado como CENTRAL KEYS#....
+Comandos registrados en el servidor ....
+
+Si el bot sale offline, revisar que no exista otra instancia usando el mismo
+DISCORD_TOKEN y que el token tenga los valores correctos.
